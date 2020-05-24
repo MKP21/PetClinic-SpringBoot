@@ -41,7 +41,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:https://github.com/MKP21/PetClinic-SpringBoot.git
+        <developerConnection>scm:git:github.com/MKP21/PetClinic-SpringBoot.git
         </developerConnection>
         <tag>HEAD</tag>
     </scm>
