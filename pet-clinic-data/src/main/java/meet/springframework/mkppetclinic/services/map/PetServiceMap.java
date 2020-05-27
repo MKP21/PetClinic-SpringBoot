@@ -1,11 +1,11 @@
 package meet.springframework.mkppetclinic.services.map;
 
 import meet.springframework.mkppetclinic.model.Pet;
-import meet.springframework.mkppetclinic.services.CrudService;
+import meet.springframework.mkppetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
