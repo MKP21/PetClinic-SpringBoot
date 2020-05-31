@@ -1,8 +1,10 @@
 package meet.springframework.mkppetclinic.bootstrap;
 
 import meet.springframework.mkppetclinic.model.Owner;
+import meet.springframework.mkppetclinic.model.PetType;
 import meet.springframework.mkppetclinic.model.Vet;
 import meet.springframework.mkppetclinic.services.OwnerService;
+import meet.springframework.mkppetclinic.services.PetTypeService;
 import meet.springframework.mkppetclinic.services.VetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,15 +15,28 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
     @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService){
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService){
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedType1 = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedType2 = petTypeService.save(cat);
+
+        System.out.println("Loaded Pet types");
+
         Owner o1 = new Owner();
         o1.setFirstName("Ramesh");
         o1.setLastName("Singh");
