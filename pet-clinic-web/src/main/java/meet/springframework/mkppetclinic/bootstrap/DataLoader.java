@@ -1,6 +1,7 @@
 package meet.springframework.mkppetclinic.bootstrap;
 
 import meet.springframework.mkppetclinic.model.Owner;
+import meet.springframework.mkppetclinic.model.Pet;
 import meet.springframework.mkppetclinic.model.PetType;
 import meet.springframework.mkppetclinic.model.Vet;
 import meet.springframework.mkppetclinic.services.OwnerService;
@@ -9,6 +10,8 @@ import meet.springframework.mkppetclinic.services.VetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -40,12 +43,24 @@ public class DataLoader implements CommandLineRunner {
         Owner o1 = new Owner();
         o1.setFirstName("Ramesh");
         o1.setLastName("Singh");
+        o1.setAddress("121 bork");
+        o1.setCity("Jersey");
+        o1.setTelephone("9903842832");
+        Pet molly = new Pet();
+        molly.setPetType(savedType1);
+        molly.setOwner(o1);
+        molly.setName("Molly");
+        molly.setBirthDate(LocalDate.now());
+        o1.getPets().add(molly);
 
         ownerService.save(o1);
 
         Owner o2 = new Owner();
         o2.setFirstName("Suresh");
         o2.setLastName("Salsa");
+        o2.setAddress("311 park");
+        o2.setCity("Hoboken");
+        o2.setTelephone("9903842832");
 
         ownerService.save(o2);
 
