@@ -1,0 +1,14 @@
+meet\springframework\mkppetclinic\model\Owner.class
+meet\springframework\mkppetclinic\services\PetService.class
+meet\springframework\mkppetclinic\services\map\OwnerServiceMap.class
+meet\springframework\mkppetclinic\services\CrudService.class
+meet\springframework\mkppetclinic\model\BaseEntity.class
+meet\springframework\mkppetclinic\services\VetService.class
+meet\springframework\mkppetclinic\model\Person.class
+meet\springframework\mkppetclinic\model\PetType.class
+meet\springframework\mkppetclinic\services\map\VetServiceMap.class
+meet\springframework\mkppetclinic\services\map\PetServiceMap.class
+meet\springframework\mkppetclinic\services\OwnerService.class
+meet\springframework\mkppetclinic\model\Vet.class
+meet\springframework\mkppetclinic\model\Pet.class
+meet\springframework\mkppetclinic\services\map\AbstractMapService.class
