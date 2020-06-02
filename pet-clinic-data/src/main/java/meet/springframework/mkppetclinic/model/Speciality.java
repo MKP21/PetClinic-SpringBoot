@@ -1,5 +1,8 @@
 package meet.springframework.mkppetclinic.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Speciality extends BaseEntity {
     private String description;
 
